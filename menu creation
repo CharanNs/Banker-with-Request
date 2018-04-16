@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+void menu();
+
+int main()
+{
+	menu();
+	return 0;
+}
+
+void menu()
+{
+	int ch;
+	printf("\nEnter ur choice : ");
+	X:
+		printf("\n1.Banker's Algorithm (to check the state of a system)\n2.bowOut\n");
+	scanf("%d",&ch);
+	switch(ch)
+		{
+			case 1:
+				start();
+				break;
+			case 2:
+				exit(0);
+			default:
+				printf("\n\n\t\tInvalid choice\n\t\tEnter choice as mentioned\n\n");
+				goto X;
+		};
+		
+}
