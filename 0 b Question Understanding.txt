@@ -1,4 +1,4 @@
-[Ques. 11]  Reena’s operating system uses an algorithm for deadlock avoidance to manage the allocation 		.
+[Ques. 11]  Reenaâ€™s operating system uses an algorithm for deadlock avoidance to manage the allocation 		.
 of resources say three namely A, B, and C to three processes P0, P1, and P2. 					.
 														.
 Consider the following scenario as reference .user must enter the current state of system as given 		.
@@ -15,11 +15,12 @@ There are 3 instances of resource A,										.
           2 instances of resource B and 									.
           2 instances of resource C available. 									.
 														.
-Write a program to check whether Reena’s operating system is in a safe state or not in the following 		.
+Write a program to check whether Reenaâ€™s operating system is in a safe state or not in the following 		.
 independent requests for additional resources in the current state:						.
            1. Request1: P0 requests for 0 instances of A, 0 instances of B and 2 instances of C.		.
            2. Request2: P1 requests for 2 instances of A, 0 instances of B and 0 instances of C.		.
                                                  .....All the request must be given by user as input.		.
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 Solution :
+
 
