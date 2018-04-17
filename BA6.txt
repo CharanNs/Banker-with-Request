@@ -49,4 +49,3 @@ When an unfinished process is found, then the resources are allocated and the pr
 
 If Finish[i] == true for all i, then the system is in a safe state.
 That means if all processes are finished, then the system is in safe state.
-
