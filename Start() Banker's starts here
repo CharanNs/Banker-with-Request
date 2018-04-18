@@ -1,0 +1,31 @@
+void start()
+{
+	int Allocation[10][10];
+	int Maximum[10][10];
+	int Need[10][10];
+	int Work[1][10];
+	int n,m,pn;
+	char choice;
+	accept(Allocation,Need,Maximum,Work,&n,&m);
+	if(banker(Allocation,Need,Work,n,m)!=0)
+	{
+		Y:
+		printf("\nDo you want make an additional request  (y=Yes|n=No)");
+		scanf("%s",&choice);
+		if(choice == 'y'||choice == 'Y')
+		{
+			printf("\nEnter process no. : ");
+			scanf("%d",&pn);
+			res_request(Allocation,Need,Work,pn-1,m);
+			if(banker(Allocation,Need,Work,n,m) == 0 )
+			{
+				exit(0);
+			}
+			goto Y;	
+		}
+		else
+			menu();
+	}
+	else
+		exit(0);
+}
