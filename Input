@@ -1,0 +1,47 @@
+void input(int A[][10],int N[][10],int M[10][10],int W[1][10],int *n,int *m)
+{
+	int i,j;
+	printf("\nEnter total no. of processes : ");
+	scanf("%d",n);
+	printf("\nEnter total no. of resources : ");
+	scanf("%d",m);
+	
+	
+	printf("\n\n\tAllocation of resources to processes\n");
+	for(i=0;i<*n;i++)
+	{
+		printf("\nProcess : %d",i+1);
+		for(j=0;j<*m;j++)
+		{
+			printf("\nResource %d : ",j+1);
+			scanf("%d",&A[i][j]);
+		}
+	}
+	printf("\n\n\tMaximum instances of resource to processes\n");
+	for(i=0;i<*n;i++)
+	{
+		printf("\nProcess %d",i+1);
+		for(j=0;j<*m;j++)
+		{
+			printf("\nResource %d : ",j+1);
+			scanf("%d",&M[i][j]);
+		}
+	}
+	printf("\nAvailable resources : ");
+	for(i=0;i<*m;i++)
+	{
+		printf("\nResource %d : ",i+1);
+		scanf("%d",&W[0][i]);
+	}
+
+	for(i=0;i<*n;i++)
+		for(j=0;j<*m;j++)
+			N[i][j]=M[i][j]-A[i][j];
+
+	printf("\nAllocation Matrix");
+	print(A,*n,*m);
+	printf("\nMaximum Requirement Matrix");
+	print(M,*n,*m);
+	printf("\nNeed Matrix");
+	print(N,*n,*m);
+}
