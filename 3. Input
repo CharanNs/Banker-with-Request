@@ -39,9 +39,24 @@ void input(int A[][10],int N[][10],int M[10][10],int W[1][10],int *n,int *m)
 			N[i][j]=M[i][j]-A[i][j];
 
 	printf("\nAllocation Matrix");
-	print(A,*n,*m);
+	for(i=0;i<n;i++){
+		printf("\n");
+		for(j=0;j<m;j++){
+			printf("%d\t",x[i][j]);
+		}
+	}	
 	printf("\nMaximum Requirement Matrix");
-	print(M,*n,*m);
+	for(i=0;i<n;i++){
+		printf("\n");
+		for(j=0;j<m;j++){
+			printf("%d\t",x[i][j]);
+		}
+	}	
 	printf("\nNeed Matrix");
-	print(N,*n,*m);
+	for(i=0;i<n;i++){
+		printf("\n");
+		for(j=0;j<m;j++){
+			printf("%d\t",x[i][j]);
+		}
+	}	
 }
