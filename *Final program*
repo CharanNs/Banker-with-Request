@@ -28,3 +28,36 @@ void menu()
 					goto X;
 			};
 }
+
+void start()
+{
+	int Allocation[10][10];
+	int Maximum[10][10];
+	int Need[10][10];
+	int Work[1][10];
+	int n,m,p;
+	char choice;
+	printf("\n\t\t\tBANKER'S ALGORITHM\n");
+	input(Allocation,Need,Maximum,Work,&n,&m);
+	if(queue(Allocation,Need,Work,n,m)!=0)
+	{
+		Y:
+		printf("\n\tProgress with requesting additional resources... (y=Yes|n=No)");
+		scanf("%s",&choice);
+		if(choice == 'y'||choice == 'Y')
+		{
+			printf("\n\tEnter process no. : ");
+			scanf("%d",&p);
+			rereq(Allocation,Need,Work,p,m);
+			if(queue(Allocation,Need,Work,n,m) == 0 )
+			{
+				exit(0);
+			}
+			goto Y;	
+		}
+		else
+			menu();
+	}
+	else
+		exit(0);
+}
